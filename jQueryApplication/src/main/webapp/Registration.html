@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+h1:hover{
+  color: red;
+}
+body:hover {
+background-color: #EAD2A8;
+}
+</style>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {	
+		$("#txtCName").focus(function(){
+			$("#txtCName").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtGen1").focus(function(){
+			$("#txtGen1").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtGen2").focus(function(){
+			$("#txtGen2").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtLoc").focus(function(){
+			$("#txtLoc").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtEmail").focus(function(){
+			$("#txtEmail").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtPass").focus(function(){
+			$("#txtPass").css({"background-color":"pink", "color":"black"});
+		});
+		
+		$("#txtCName").blur(function(){
+			$("#txtCName").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#txtGen1").blur(function(){
+			$("#txtGen1").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#txtGen2").blur(function(){
+			$("#txtGen2").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#txtLoc").blur(function(){
+			$("#txtLoc").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#txtEmail").blur(function(){
+			$("#txtEmail").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#txtPass").blur(function(){
+			$("#txtPass").css({"background-color":"yellow", "color":"red"});
+		});
+		
+		$("#btn1").mouseenter(function(){
+			$("#btn1").css("background-color", "violet");
+		});
+		
+		$("#btn1").mouseleave(function(){
+			$("#btn1").css("background-color", "white");
+		});
+		
+		$("#btn2").mouseenter(function(){
+			$("#btn2").css("background-color", "violet");
+		});
+		
+		$("#btn2").mouseleave(function(){
+			$("#btn2").css("background-color", "white");
+		});
+		
+		
+		
+		$("#btn1").click(function() {
+			var name = $("#txtCName").val();
+			$("#result1").text(name);
+			
+			
+			var gen = $('input[type="radio"]:checked');
+			if(gen.length>0) {
+				$("#result2").html(gen.val());
+			}
+			else{
+				alert("Gender not choosen");
+			}
+			
+			var loc = $("#txtLoc").val();
+			$("#result3").text(loc);
+			
+			var email = $("#txtEmail").val();
+			$("#result4").text(email);
+			
+			var pass = $("#txtPass").val();
+			$("#result5").text(pass);
+		
+		});
+		
+		//$("#btn2").click(function(){
+			//$("#table").fadeToggle();
+		//});
+		$("#btn2").click(function() {
+			$("#txtCName").val("");
+			$("#txtGen1").val("");
+			$("#txtGen2").val("");
+			$("#txtLoc").val("");
+			$("#txtEmail").val("");
+			$("#txtPass").val("");
+
+		});
+	});
+</script>
+</head>
+<body style="text-align: center">
+<h1>Customer Register here</h1>
+<center>
+	<form>
+	<table id="table" border="1";border-spacing=10%>
+		<tr>
+			<td>Customer Name :</td>
+			<td><input type="text" name="textcname" id="txtCName" /></td>
+		</tr>
+		<tr>
+			<td>Gender :</td>
+			<td>
+				<input type="radio" name="gender" id="txtGen1" value="Male" />Male  				
+				<input type="radio" name="gender" id="txtGen2" value="Female" />Female 
+			</td>
+		</tr>
+		<tr>
+			<td>Location :</td>
+			<td>
+				<select id="txtLoc">
+					<option value="None" selected>-- Select --</option>
+					<option value="India">India</option>
+					<option value="United State">United State</option>
+					<option value="Malaysia">Malaysia</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td> Email :</td>
+			<td><input type="email" id="txtEmail" /></td>
+		</tr>
+		<tr>
+			<td> Password :</td>
+			<td><input type="password" id="txtPass" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Register Customer" id="btn1" /></td>
+			<td><input type="reset" value="Clear All" id="btn2" /></td>
+		</tr>
+	</table>
+	</form>
+	</center>
+	<br />
+	<p id="result1"></p>
+	<p id="result2"></p>
+	<p id="result3"></p>
+	<p id="result4"></p>
+	<p id="result5"></p>
+</body>
+</html>

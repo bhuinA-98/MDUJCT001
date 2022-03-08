@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#flip").click(function() {
+			$("#panel").slideToggle(2000);
+			//$("#panel").fadeToggle(3000);
+		});
+	});
+	
+	$(document).ready(function() {
+		$("#flip1").click(function() {
+			$("#panel1").slideToggle(2000);
+			//$("#panel").fadeToggle(3000);
+		});
+	});
+</script>
+<style>
+#flip, #flip1 {
+	padding: 15px;
+	text-align: center;
+	background-color: black;
+	border: solid 1px #ff0000;
+	color: yellow;
+}
+
+#panel, #panel1 {
+	padding: 5px;
+	text-align: center;
+	background-color: pink;
+	border: solid 1px #ff0000;
+	color: yellow;
+}
+
+/* #panel, { */
+/* 	padding: 100px; */
+/* 	display: none; */
+/* 	color: white; */
+/* } */
+</style>
+<div id="flip">Student Info</div>
+<div id="panel" style="box-shadow: 1px 1px 10px 1px rgb(255, 0, 0); text-shadow: 3px 2px 5px rgb(230, 120, 100);">
+	<table class="table">
+	 <thead class="thead-dark">
+		<tr>
+			<th scope="col">Student Name</th>
+			<th scope="col">Student RollNo</th>
+			<th scope="col">Student Class</th>
+			<th scope="col">Student Section</th>
+		</tr>
+		</thead>
+		<tbody>  
+		<tr scope="row">
+			<td>Aranya Das</td>
+			<td>101</td>
+			<td>Class X</td>
+			<td>A</td>
+		</tr>
+
+		<tr scope="row">
+			<td>Ayan Bhuin</td>
+			<td>102</td>
+			<td>Class XI</td>
+			<td>A</td>
+		</tr>
+
+		<tr scope="row">
+			<td>Trisha Ghosh</td>
+			<td>105</td>
+			<td>Class XII</td>
+			<td>B</td>
+		</tr>
+		</tbody>
+
+	</table>
+</div>
+<div id="flip1">Employee Info</div>
+<div id="panel1"
+	style="box-shadow: 1px 1px 10px 1px rgb(255, 0, 0); text-shadow: 3px 2px 5px rgb(230, 120, 100);">
+	<table class="table">
+	 <thead class="thead-dark">
+		<tr>
+			<th scope="col">Employee Name</th>
+			<th scope="col">Employee Id</th>
+			<th scope="col">Employee Dept</th>
+			<th scope="col">Employee Salary</th>
+		</tr>
+		</thead>
+		<tbody>  
+		<tr scope="row">
+			<td>Sampra Ghosh</td>
+			<td>20504070</td>
+			<td>Marketing</td>
+			<td>26000</td>
+		</tr>
+
+		<tr scope="row">
+			<td>Ahana Roy</td>
+			<td>10287955</td>
+			<td>Sales</td>
+			<td>35000</td>
+		</tr>
+
+		<tr scope="row">
+			<td>Swaralipi Ghosh</td>
+			<td>58794612</td>
+			<td>Accounts</td>
+			<td>52000</td>
+		</tr>
+		</tbody>
+
+	</table>
+	</div>
+</head>
+<body>
+
+</body>
+</html>
